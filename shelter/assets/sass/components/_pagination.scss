@@ -1,0 +1,22 @@
+.pagination {
+  @extend %font-add;
+  width: 340px;
+  display: flex;
+  justify-content: space-between;
+
+  @include media-mobile {
+    padding-top: 10px;
+    width: 300px;
+  }
+}
+
+.pagination__number {
+  @include font($lineheight: 1.5rem, $size: 1.33rem, $weight: 400);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 100px;
+  background-color: $color-highlight;
+}

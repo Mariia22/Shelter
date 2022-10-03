@@ -1,0 +1,63 @@
+.about {
+  display: flex;
+  justify-content: space-around;
+  padding: 80px 120px 100px;
+
+  @include media-tablet {
+    padding-left: 0;
+    padding-right: 0;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  @include media-mobile {
+    padding-top: 42px;
+    padding-bottom: 40px;
+  }
+}
+
+.about__photo {
+  width: 300px;
+  height: 408px;
+  background-image: url('./../assets/images/about-pets.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+
+  @include media-mobile {
+    width: 260px;
+    height: 353.6px;
+  }
+}
+
+.about__text {
+  padding: 12px 0 0 10px;
+  width: 46%;
+  color: $color-text;
+
+  @include media-tablet {
+    padding: 0 5px;
+    margin-bottom: 65px;
+    width: 62%;
+  }
+
+  @include media-mobile {
+    width: 100%;
+    margin-bottom: 25px;
+  }
+}
+
+.about__text__paragraph {
+  margin-top: 25px;
+
+  @include media-mobile {
+    text-align: justify;
+    padding: 0 10px;
+  }
+}
+
+.about__title {
+  @include media-mobile {
+    text-align: center;
+  }
+}

@@ -1,0 +1,120 @@
+.donation {
+  padding: 80px 142px 88px 143px;
+  background-color: $color-background-grey;
+
+  @include media-tablet {
+    padding: 80px 0 98px 0;
+  }
+
+  @include media-mobile {
+    padding: 43px 0 40px 0;
+  }
+}
+
+.donation__info {
+  display: flex;
+  justify-content: center;
+
+  @include media-tablet {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+}
+
+.donation__image {
+  width: 505px;
+  height: 261px;
+  margin: 10px 30px 0 0;
+  background-image: url('./../assets/images/donation-dog.png');
+
+  @include media-tablet {
+    margin: 50px 0 0 0;
+  }
+
+  @include media-mobile {
+    margin-top: 30px;
+    width: 260px;
+    height: 135.2px;
+    background-position: center center;
+    background-size: 260px 135.2px;
+    background-repeat: no-repeat;
+  }
+}
+
+.donation__content {
+  width: 380px;
+  display: flex;
+  flex-direction: column;
+
+  @include media-mobile {
+    width: 100%;
+    align-items: center;
+  }
+}
+
+.donation__title {
+  @include media-mobile {
+    text-align: center;
+  }
+}
+
+.donation__text {
+  @extend %font-add;
+  @include font($lineheight: 1.1rem, $size: 1rem, $weight: 400);
+  letter-spacing: 0.06em;
+  margin: 20px 0;
+  color: $color-header;
+
+  @include media-mobile {
+    @include font($lineheight: 1.6rem, $size: 1rem, $weight: 400);
+    letter-spacing: 0;
+  }
+}
+
+.donation__information {
+  margin-top: 20px;
+  @include font($lineheight: 1.2rem, $size: 0.8rem, $weight: 400, $style: italic);
+  color: $color-grey;
+
+  @include media-mobile {
+    padding: 0 10px;
+    text-align: justify;
+  }
+}
+
+.donation__card {
+  width: 349px;
+  padding: 10px 15px;
+  display: flex;
+  justify-content: space-between;
+  background-color: $color-highlight;
+  border-radius: 9px;
+
+  &:hover {
+    background-color: $color-highlight-light;
+  }
+
+  &__img {
+    width: 30px;
+    height: 23px;
+    background-image: url('./../assets/icons/icon-credit-card.svg');
+    background-repeat: no-repeat;
+  }
+
+  &__text {
+    margin: 0;
+    @extend %font-add;
+    @include font($lineheight: 1.53rem, $size: 1.33rem, $weight: 400);
+    letter-spacing: 0.06em;
+    color: $color-header;
+  }
+
+  @include media-mobile {
+    width: 281px;
+
+    &__text {
+      margin-top: 2px;
+      @include font($lineheight: 1.1rem, $size: 1rem, $weight: 400);
+    }
+  }
+}

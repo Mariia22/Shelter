@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our pets</title>
+  <link rel="stylesheet" href="./../index.css">
+  <link rel="icon" href="./../../assets/favicon.ico">
+</head>
+
+<body>
+  <header class="header header__light">
+    <div class="wrapper header__wrapper">
+      <a href="./../main/index.html" class="header__logo">
+        <h1 class="header__logo__title header__logo__title--dark">Cozy House</h1>
+        <p class="header__logo__text header__logo__text--dark">Shelter for pets in Boston</p>
+      </a>
+      <div class="header__hamburger">
+        <span class="header__line header__line__dark header__line__page"></span>
+        <span class="header__line header__line__dark header__line__page"></span>
+        <span class="header__line header__line__dark header__line__page"></span>
+      </div>
+      <nav class="header__nav nav">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a class="nav__link nav__link--dark" href="./../main/index.html">About the shelter</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link nav__link--dark nav__link__dark--active">Our pets</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link nav__link--dark" href="./../main/index.html#help">Help the shelter</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link nav__link--dark" href="#contacts">Contacts</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main class="main pets__page hero__filter">
+    <div class="wrapper">
+      <div class="pets__info">
+        <h3 class="pets__page__title title">Our friends who <span class="title__wrap">are looking for a house</span>
+        </h3>
+        <div class="pets__container"></div>
+        <div class="pets__button pagination">
+          <button class="button__disabled pagination__border__left">&lt;&lt;</button>
+          <button class="button__disabled pagination__left">&lt;</button>
+          <div class="pagination__number">1</div>
+          <button class="button__circle pagination__right">&gt;</button>
+          <button class="button__circle pagination__border__right">&gt;&gt;</button>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer id="contacts">
+    <div class="wrapper">
+      <div class="contacts">
+        <div class="contacts__info">
+          <h3 class="contacts__title--light">For questions <span class="title__wrap">and suggestions</span></h3>
+          <h3 class="contacts__title--mobile">For questions and suggestions</h3>
+          <a class="contacts__email" href="mailto:email@shelter.com">email@shelter.com</a>
+          <a class="contacts__phone" href="tel:+136745677554">+13 674 567 75 54</a>
+        </div>
+        <div class="contacts__adress">
+          <h3 class="contacts__title--middle">We are waiting <span class="title__wrap">for your visit</span></h3>
+          <h3 class="contacts__title--mobile contacts__title__waiting">We are waiting for your visit</h3>
+          <a class="contacts__point" target="blank" href="https://goo.gl/maps/aGVXaGQcagKLtcQs6">
+            1 Central Street, Boston (entrance from the store)</a>
+          <a class="contacts__point__bottom" target="blank" href="https://goo.gl/maps/mYHbmaoXXx3vWvYx6">18 South Park,
+            London
+          </a>
+        </div>
+        <div class="contacts__photo"></div>
+      </div>
+    </div>
+  </footer>
+  <script type="module" src="./../../assets/js/petPage.js"></script>
+</body>
+
+</html>

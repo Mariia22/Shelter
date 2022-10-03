@@ -1,0 +1,281 @@
+.pets {
+  padding: 80px 0 100px;
+  background-color: $color-background-grey;
+
+  @include media-mobile {
+    padding: 43px 0 42px;
+  }
+}
+
+.pets__page {
+  padding: 200px 0 100px;
+  background-color: $color-background-grey;
+
+  @include media-tablet {
+    padding-bottom: 76px;
+  }
+
+  @include media-mobile {
+    padding-top: 162px;
+    padding-bottom: 43px;
+  }
+}
+
+.pets__info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pets__container {
+  padding: 60px 0 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  @include media-tablet {
+    padding: 30px 64px 10px 64px;
+    width: 708px;
+    @include columns(46%);
+  }
+
+  @include media-mobile {
+    padding: 45px 0 0 0;
+    margin: 0 15px;
+    width: 100%;
+    @include columns(100%);
+    justify-content: center;
+  }
+}
+
+.pets__cards__slider {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px 0 30px;
+
+  @include media-tablet {
+    width: 708px;
+  }
+
+  @include media-mobile {
+    width: 100%;
+    padding-top: 40px;
+    padding-bottom: 12px;
+    justify-content: center;
+  }
+}
+
+.pets__cards__left {
+  background: url('./../assets/icons/icon-arrow-left.svg') no-repeat center center;
+
+  @include media-mobile {
+    margin-left: 10px;
+    margin-right: 40px;
+    order: 2;
+  }
+}
+
+.pets__cards__right {
+  background: url('./../assets/icons/icon-arrow-right.svg') no-repeat center center;
+
+  @include media-mobile {
+    margin-left: 40px;
+    margin-right: 10px;
+    order: 3;
+  }
+}
+
+.pets__cards {
+  width: 82.5%;
+  position: relative;
+  overflow: hidden;
+}
+
+.pets__cards__container {
+  position: relative;
+  display: none;
+  justify-content: space-between;
+  animation: 1s ease-in-out;
+
+  @include media-mobile {
+    margin: 0 15px;
+    width: 100%;
+    order: 0;
+    justify-content: center;
+  }
+}
+
+.pets__cards__container--active,
+.next {
+  display: flex;
+}
+
+.card__img {
+  width: 270px;
+  height: 270px;
+  object-fit: cover;
+  border-top-left-radius: 9px;
+  border-top-right-radius: 9px;
+}
+
+.card__name {
+  margin-top: 27px;
+
+  @include media-mobile {
+    margin-top: 32px;
+  }
+}
+
+.pet__card__container {
+  margin-bottom: 30px;
+  padding-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: $color-background-card;
+  border-radius: 9px;
+
+  &:hover {
+    @extend %transition;
+    background: $color-light;
+    cursor: pointer;
+
+    .button {
+      background-color: $color-highlight-light;
+      border: none;
+    }
+  }
+}
+
+.pet__card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: fade 3s;
+
+  @include media-tablet {
+
+    &:nth-child(7),
+    &:nth-child(8) {
+      display: none;
+    }
+  }
+
+  @include media-mobile {
+
+    &:nth-child(4),
+    &:nth-child(5),
+    &:nth-child(6) {
+      display: none;
+    }
+  }
+}
+
+.pets__title {
+  @include media-tablet {
+    width: 56%;
+  }
+
+  @include media-mobile {
+    width: 100%;
+  }
+}
+
+.pets__cards__card {
+  display: flex;
+  padding-bottom: 30px;
+  margin: 0 30px;
+  flex-direction: column;
+  align-items: center;
+  background: $color-background-card;
+  border-radius: 9px;
+
+  &:hover {
+    @extend %transition;
+    background: $color-light;
+    cursor: pointer;
+
+    .button {
+      background-color: $color-highlight-light;
+      border: none;
+    }
+  }
+
+
+  @include media-tablet {
+    margin: 0 10px;
+  }
+
+  @include media-mobile {
+    margin: 0 0 20px 0;
+  }
+}
+
+@include media-tablet {
+  .pets__page__title {
+    width: 56%;
+  }
+}
+
+@include media-mobile {
+  .pets__page__title {
+    width: 100%;
+  }
+}
+
+.next {
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.to-left {
+  animation-name: left;
+}
+
+.from-right {
+  animation-name: right;
+}
+
+.to-right {
+  animation-name: right;
+  animation-direction: reverse;
+}
+
+.from-left {
+  animation-name: left;
+  animation-direction: reverse;
+}
+
+@keyframes left {
+  from {
+    left: 0;
+  }
+
+  to {
+    left: -100%;
+  }
+}
+
+@keyframes right {
+  from {
+    left: 100%;
+  }
+
+  to {
+    left: 0;
+  }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

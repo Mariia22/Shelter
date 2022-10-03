@@ -1,0 +1,73 @@
+.hero {
+  position: relative;
+  padding-top: 120px;
+  background: url('./../assets/images/noise_transparent@2x.png'), radial-gradient(100% 215.42% at 0% 0%, $color-light-brown 0%, $color-brown 100%), linear-gradient(0deg, $color-dark-brown, $color-dark-brown);
+}
+
+.hero__information {
+  padding-top: 60px;
+  display: flex;
+  justify-content: space-between;
+
+  @include media-tablet {
+    padding-top: 30px;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.hero__content {
+  display: flex;
+  flex-direction: column;
+  width: 39%;
+  padding-top: 163px;
+  padding-bottom: 243px;
+
+  @include media-tablet {
+    padding-top: 0;
+    padding-bottom: 100px;
+    width: 65%;
+    align-items: center;
+  }
+
+  @include media-mobile {
+    padding-bottom: 105px;
+    width: 100%;
+  }
+}
+
+.hero__photo {
+  width: 698px;
+  height: 729px;
+  background-image: url('./../assets/images/start-screen-puppy.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+
+  @include media-tablet {
+    width: 569px;
+    height: 593px;
+    align-self: flex-end;
+  }
+
+  @include media-mobile {
+    width: 260px;
+    height: 271.77px;
+  }
+}
+
+.hero__text {
+  margin: 42px 0;
+  color: $color-dark;
+
+  @include media-mobile {
+    margin: 41px 0 41px;
+    text-align: center;
+  }
+}
+
+@include media-mobile {
+  .hero__title {
+    text-align: center;
+  }
+}

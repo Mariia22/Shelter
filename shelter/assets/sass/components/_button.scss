@@ -1,0 +1,101 @@
+.button {
+  @extend %font-add;
+  @include font($lineheight: 1.47rem, $size: 1.13rem, $weight: 400);
+  letter-spacing: 0.06em;
+  width: 207px;
+  height: 52px;
+  border-radius: 100px;
+  padding: 15px 44px;
+  background-color: $color-highlight;
+  color: $color-text-dark;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  @extend %transition;
+
+  &:hover {
+    background-color: $color-highlight-light;
+    border: none;
+  }
+
+  &__hero {
+    @include media-tablet {
+      align-self: center;
+    }
+  }
+
+  &__circle {
+    @include font($lineheight: 1.53rem, $size: 1.33rem, $weight: 400);
+    letter-spacing: 0.06em;
+    width: 52px;
+    height: 52px;
+    border-radius: 100px;
+    border: 2px solid $color-highlight;
+    background-color: $color-background-grey;
+    color: $color-text-dark;
+
+    &:hover {
+      color: $color-text-dark;
+      background-color: $color-highlight-light;
+      border: none;
+    }
+
+    &:active {
+      color: $color-text-dark;
+      background-color: $color-highlight;
+    }
+  }
+
+  &__modal {
+    position: absolute;
+    top: -48px;
+    right: -45px;
+    background-color: transparent;
+
+    svg {
+      pointer-events: none;
+    }
+
+    @include media-tablet {
+      top: -46px;
+      right: -43px;
+    }
+
+    @include media-mobile {
+      top: -52px;
+      right: -30px;
+    }
+  }
+
+  &__disabled {
+    @include font($lineheight: 1.53rem, $size: 1.33rem, $weight: 400);
+    letter-spacing: 0.06em;
+    width: 52px;
+    height: 52px;
+    border-radius: 100px;
+    border: 2px solid $color-dark;
+    background-color: $color-background-grey;
+    color: $color-dark;
+    cursor: default;
+  }
+
+  &__card {
+    padding: 0;
+    width: 187px;
+    height: 52px;
+    background-color: $color-background-card;
+    border: 2px solid $color-highlight;
+  }
+
+  &__information {
+    margin-top: 30px;
+    width: 261px;
+    padding: 16px 43px 14px 45px;
+  }
+}
+
+.hover {
+  color: $color-text-dark;
+  background-color: $color-highlight-light;
+  border: none;
+}

@@ -1,0 +1,38 @@
+.header__hamburger {
+  display: none;
+
+  @include media-mobile {
+    width: 30px;
+    height: 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 1s ease-out;
+    cursor: pointer;
+  }
+}
+
+.header__hamburger--active {
+
+  @include media-mobile {
+    z-index: 3;
+    transform: rotate(90deg);
+    transition: all .8s ease-out;
+    cursor: pointer;
+  }
+}
+
+.header__line {
+  display: block;
+  height: 2px;
+  @extend %transition;
+  background-color: $color-highlight;
+}
+
+.header__line__dark {
+  background-color: $color-black;
+}
+
+.header__line__dark--active {
+  background-color: $color-highlight;
+}

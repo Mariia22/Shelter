@@ -1,0 +1,131 @@
+html {
+  font-size: 15px;
+  scroll-behavior: smooth;
+}
+
+@font-face {
+  font-family: 'Georgia';
+  src: url('./../assets/fonts/Georgia.woff2') format('woff2'),
+    url('./../assets/fonts/Georgia.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Georgia';
+  src: url('./../assets/fonts/Georgia-Bold.woff2') format('woff2'),
+    url('./../assets/fonts/Georgia-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Arial';
+  src: url('./../assets/fonts/Arial.woff2') format('woff2'),
+    url('./../assets/fonts/Arial.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  @extend %font-prim;
+  @include font($size: 1rem, $lineheight: 1.6rem, $weight: normal);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  max-width: $content-width;
+  width: 100%;
+  padding: 0 40px;
+  margin: 0 auto;
+
+  @include media-tablet {
+    padding: 0 30px;
+  }
+
+  @include media-mobile {
+    padding: 0 10px;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: $color-text;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.title {
+  width: 33%;
+  text-align: center;
+}
+
+.title__wrap {
+  white-space: nowrap;
+}
+
+.overflow__hidden {
+  overflow: hidden;
+}
+
+.overflow__hidden-y {
+  overflow-y: hidden;
+}
+
+.blackout {
+  filter: brightness(52%);
+}
+
+
+h1 {
+  @extend %font-add;
+  @include font($lineheight: 2.35rem, $size: 2.13rem, $weight: 400);
+  letter-spacing: 0.06em;
+  margin: 0;
+}
+
+h2 {
+  @extend %font-add;
+  @include font($lineheight: 3.81rem, $size: 2.93rem, $weight: 400);
+  margin: 0;
+  color: $color-light;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+  @include media-mobile {
+    @include font($lineheight: 2.2rem, $size: 1.67rem, $weight: 400);
+    letter-spacing: 0.06em;
+  }
+}
+
+h3 {
+  @extend %font-add;
+  @include font($lineheight: 3.03rem, $size: 2.33rem, $weight: 400);
+  letter-spacing: 0.06em;
+  margin: 0;
+  color: $color-header;
+
+  @include media-mobile {
+    @include font($lineheight: 2.13rem, $size: 1.67rem, $weight: 400);
+  }
+}
+
+h4 {
+  @extend %font-add;
+  @include font($lineheight: 1.5rem, $size: 1.33rem, $weight: 400);
+  letter-spacing: 0.06em;
+  margin: 30px 0;
+  color: $color-header;
+}

@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "sass": "^1.49.10"
+  },
+  "name": "shelter",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "style": "sass --watch assets/sass/style.scss pages/index.css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
